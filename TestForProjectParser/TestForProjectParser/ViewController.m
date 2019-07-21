@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property(nonatomic) NSArray *array;
+
 @end
 
 @implementation ViewController
