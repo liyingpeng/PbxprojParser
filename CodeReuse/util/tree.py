@@ -19,6 +19,9 @@ class Tree(object):
         '''
         newTNode = TreeNode()
         newTNode.data = element
+        '''
+        找到该节点的子节点
+        '''
         for tNode in self.treeArray:
             for child in tNode.data.children:
                 if child.id == element.id:
@@ -26,6 +29,9 @@ class Tree(object):
                     tNode.children.append(newTNode)
                     break
                     pass
+        '''
+        找到该节点的父节点
+        '''
         for child in element.children:
             for tNode in self.treeArray:
                 if child.id == tNode.data.id:
