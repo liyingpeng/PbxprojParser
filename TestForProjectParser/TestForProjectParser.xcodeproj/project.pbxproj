@@ -110,7 +110,7 @@
 		9C4A634922E4828700037752 /* TestForProjectParser */ = {
 			isa = PBXGroup;
 			children = (
-				9C59BBB2230D3C0B004BFADB /* Controller */,
+				9C59BBB2230D3C0B004BFADB /* Controllers */,
 				9C59BBAE230D3BEC004BFADB /* Model */,
 				9C59BBAA230D3BD1004BFADB /* View */,
 				9C4A634A22E4828700037752 /* AppDelegate.h */,
@@ -162,13 +162,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9C59BBB2230D3C0B004BFADB /* Controller */ = {
+		9C59BBB2230D3C0B004BFADB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				9C59BBB3230D3C18004BFADB /* TestViewController.h */,
 				9C59BBB4230D3C18004BFADB /* TestViewController.m */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
