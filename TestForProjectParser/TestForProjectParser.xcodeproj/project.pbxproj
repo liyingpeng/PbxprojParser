@@ -18,6 +18,7 @@
 		9C59BBAD230D3BE6004BFADB /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C59BBAC230D3BE6004BFADB /* TestView.m */; };
 		9C59BBB1230D3C07004BFADB /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C59BBB0230D3C07004BFADB /* TestModel.m */; };
 		9C59BBB5230D3C18004BFADB /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C59BBB4230D3C18004BFADB /* TestViewController.m */; };
+		9C59BBB8230D4192004BFADB /* TesetViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C59BBB7230D4192004BFADB /* TesetViewController2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		9C59BBB0230D3C07004BFADB /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 		9C59BBB3230D3C18004BFADB /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		9C59BBB4230D3C18004BFADB /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		9C59BBB6230D4192004BFADB /* TesetViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TesetViewController2.h; sourceTree = "<group>"; };
+		9C59BBB7230D4192004BFADB /* TesetViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TesetViewController2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 			children = (
 				9C59BBB3230D3C18004BFADB /* TestViewController.h */,
 				9C59BBB4230D3C18004BFADB /* TestViewController.m */,
+				9C59BBB6230D4192004BFADB /* TesetViewController2.h */,
+				9C59BBB7230D4192004BFADB /* TesetViewController2.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C59BBB8230D4192004BFADB /* TesetViewController2.m in Sources */,
 				9C59BBB5230D3C18004BFADB /* TestViewController.m in Sources */,
 				9C59BBAD230D3BE6004BFADB /* TestView.m in Sources */,
 				9C59BBB1230D3C07004BFADB /* TestModel.m in Sources */,
