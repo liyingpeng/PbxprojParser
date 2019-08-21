@@ -15,6 +15,9 @@
 		9C4A635A22E4828800037752 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4A635922E4828800037752 /* main.m */; };
 		9C4A636422E4828800037752 /* TestForProjectParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4A636322E4828800037752 /* TestForProjectParserTests.m */; };
 		9C4A636F22E4828800037752 /* TestForProjectParserUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C4A636E22E4828800037752 /* TestForProjectParserUITests.m */; };
+		9C59BBAD230D3BE6004BFADB /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C59BBAC230D3BE6004BFADB /* TestView.m */; };
+		9C59BBB1230D3C07004BFADB /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C59BBB0230D3C07004BFADB /* TestModel.m */; };
+		9C59BBB5230D3C18004BFADB /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C59BBB4230D3C18004BFADB /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		9C4A636A22E4828800037752 /* TestForProjectParserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestForProjectParserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4A636E22E4828800037752 /* TestForProjectParserUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestForProjectParserUITests.m; sourceTree = "<group>"; };
 		9C4A637022E4828800037752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C59BBAB230D3BE6004BFADB /* TestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		9C59BBAC230D3BE6004BFADB /* TestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		9C59BBAF230D3C07004BFADB /* TestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestModel.h; sourceTree = "<group>"; };
+		9C59BBB0230D3C07004BFADB /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
+		9C59BBB3230D3C18004BFADB /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		9C59BBB4230D3C18004BFADB /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +94,6 @@
 				9C4A636222E4828800037752 /* TestForProjectParserTests */,
 				9C4A636D22E4828800037752 /* TestForProjectParserUITests */,
 				9C4A634822E4828700037752 /* Products */,
-				732D3A0A19EE12FB008C9336 /* Launch Screen.xib */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +110,9 @@
 		9C4A634922E4828700037752 /* TestForProjectParser */ = {
 			isa = PBXGroup;
 			children = (
+				9C59BBB2230D3C0B004BFADB /* Controller */,
+				9C59BBAE230D3BEC004BFADB /* Model */,
+				9C59BBAA230D3BD1004BFADB /* View */,
 				9C4A634A22E4828700037752 /* AppDelegate.h */,
 				9C4A634B22E4828700037752 /* AppDelegate.m */,
 				9C4A634D22E4828700037752 /* ViewController.h */,
@@ -131,6 +142,33 @@
 				9C4A637022E4828800037752 /* Info.plist */,
 			);
 			path = TestForProjectParserUITests;
+			sourceTree = "<group>";
+		};
+		9C59BBAA230D3BD1004BFADB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C59BBAB230D3BE6004BFADB /* TestView.h */,
+				9C59BBAC230D3BE6004BFADB /* TestView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C59BBAE230D3BEC004BFADB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C59BBAF230D3C07004BFADB /* TestModel.h */,
+				9C59BBB0230D3C07004BFADB /* TestModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C59BBB2230D3C0B004BFADB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C59BBB3230D3C18004BFADB /* TestViewController.h */,
+				9C59BBB4230D3C18004BFADB /* TestViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +301,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C59BBB5230D3C18004BFADB /* TestViewController.m in Sources */,
+				9C59BBAD230D3BE6004BFADB /* TestView.m in Sources */,
+				9C59BBB1230D3C07004BFADB /* TestModel.m in Sources */,
 				9C4A634F22E4828700037752 /* ViewController.m in Sources */,
 				9C4A635A22E4828800037752 /* main.m in Sources */,
 				9C4A634C22E4828700037752 /* AppDelegate.m in Sources */,
