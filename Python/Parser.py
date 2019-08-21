@@ -74,7 +74,7 @@ class Parser(object):
 
 
                 if len(node.filename.split('.')) > 1:
-                    node.isLeafNode = true
+                    node.isLeafNode = True
 
             for children in nameIdPat.findall(childrenPat.findall(contentItem)[0]):
                 childrenNode = tree.TreeNode()
