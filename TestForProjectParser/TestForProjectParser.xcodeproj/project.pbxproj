@@ -113,6 +113,7 @@
 		9C4A634922E4828700037752 /* TestForProjectParser */ = {
 			isa = PBXGroup;
 			children = (
+				9C59BBB9230D4241004BFADB /* Controller2 */,
 				9C59BBB2230D3C0B004BFADB /* Controller */,
 				9C59BBAE230D3BEC004BFADB /* Model */,
 				9C59BBAA230D3BD1004BFADB /* View */,
@@ -170,10 +171,17 @@
 			children = (
 				9C59BBB3230D3C18004BFADB /* TestViewController.h */,
 				9C59BBB4230D3C18004BFADB /* TestViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9C59BBB9230D4241004BFADB /* Controller2 */ = {
+			isa = PBXGroup;
+			children = (
 				9C59BBB6230D4192004BFADB /* TesetViewController2.h */,
 				9C59BBB7230D4192004BFADB /* TesetViewController2.m */,
 			);
-			path = Controller;
+			path = Controller2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
