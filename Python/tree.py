@@ -18,6 +18,29 @@ class Tree(object):
             self.root = node
         self.pendingDict[node.md5] = node
 
+    def findNode(self, md5):
+        stack = []
+        node = self.root
+        stack.append(node)
+        while(len(node.children) > 0):
+            node = node.children[0]
+            stack.append(node)
+
+        while(len(stack) > 0):
+            node = stack.pop()
+            if (node.md5 == md5):
+                return True
+            if (len(stack) > 0):
+                childrenList = stack[-1].children
+                index = childrenList.index(node)
+                if (index < len(childrenList) - 1):
+                    node = childrenList[index + 1]
+                    stack.append(node)
+                    while(len(node.children) > 0):
+                        node = node.children[0]
+                        stack.append(node)
+        return False
+
     def generate(self):
         self.generateTreeStruct(self.root)
 

@@ -113,9 +113,12 @@
 		9C4A634922E4828700037752 /* TestForProjectParser */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				9C59BBB9230D4241004BFADB /* Controller2 */,
 				9C59BBB2230D3C0B004BFADB /* Controller */,
+=======
 				9C59BBAE230D3BEC004BFADB /* Model */,
+>>>>>>>
 				9C59BBAA230D3BD1004BFADB /* View */,
 				9C4A634A22E4828700037752 /* AppDelegate.h */,
 				9C4A634B22E4828700037752 /* AppDelegate.m */,

@@ -20,9 +20,6 @@ class Parser(object):
         self.nodeArray = []
         self.tree = tree.Tree()
 
-        self.nameIdPat = re.compile(r'[0-9A-Z]+\s/\*\s.+\s\*/') 
-            # 9C4A634722E4828700037752 /* TestForProjectParser.app */,
-
     @staticmethod
     def findProjectPath(self):
         projectDir = sys.argv[1]
@@ -49,6 +46,8 @@ class Parser(object):
             # 9C4A634822E4828700037752 /* Products */ = {
         namePat = re.compile(r'/\*\s.+\s\*/') 
             # /* TestForProjectParser.app */
+        nameIdPat = re.compile(r'[0-9A-Z]+\s/\*\s.+\s\*/') 
+            # 9C4A634722E4828700037752 /* TestForProjectParser.app */,
         idPat = re.compile(r'[0-9A-Z]+') 
             # 9C4A634822E4828700037752
         childrenPat = re.compile(r'children\s=\s([\s\S]*)')
@@ -84,7 +83,7 @@ class Parser(object):
                 if len(node.filename.split('.')) > 1:
                     node.isLeafNode = True
 
-            for children in self.nameIdPat.findall(childrenPat.findall(contentItem)[0]):
+            for children in nameIdPat.findall(childrenPat.findall(contentItem)[0]):
                 childrenNode = tree.TreeNode()
                 childrenNode.md5 = idPat.findall(children)[0]
                 if len(namePat.findall(contentItem)) > 0:
@@ -114,18 +113,23 @@ class Parser(object):
         conflictPat = re.compile(r'<<<<<<<[\s\S]*>>>>>>>')
         conflictString = conflictPat.findall(self.projectSettingContent)[0]
         print conflictString
-        for children in self.nameIdPat.findall(conflictString):
-            print children
-            self.deleteContentInFile(children)
+        nameIdPat = re.compile(r'[0-9A-Z]+\s/\*\s.+\s\*/,') 
+            # 9C4A634722E4828700037752 /* TestForProjectParser.app */,
+        idPat = re.compile(r'[0-9A-Z]+') 
+            # 9C4A634822E4828700037752
+        for children in nameIdPat.findall(conflictString):
+            if not self.tree.findNode(idPat.findall(children)[0]):
+                self.deleteContentInFile(children)
         pass
 
     def deleteContentInFile(self, content):
+        
         with open(self.project_file,"r") as f:
             lines = f.readlines()
             #print(lines)
         with open(self.project_file,"w") as f_w:
             for line in lines:
-                if content in line:
+                if content == line.strip():
                     print "deleting -- " + content
                     continue
                 f_w.write(line)
