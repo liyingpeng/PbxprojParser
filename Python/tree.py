@@ -21,13 +21,25 @@ class Tree(object):
     def generate(self):
         self.generateTreeStruct(self.root)
 
+    # 生成已root为根节点的树结构
     def generateTreeStruct(self, root):
+        nodeRemoved = []
         for node in root.children:
             if node.isLeafNode:
                 continue
-            self.mergeNodeValue(node, self.pendingDict[node.md5])
+            realNode = self.pendingDict[node.md5]
+            if node.filename != realNode.filename:
+                # 当页面发生冲突时需要校验 md5和文件名 以免文件名修改（文件名修改的冲突，md5是不会变的）
+                nodeRemoved.append(node)
+                continue
+            self.mergeNodeValue(node, realNode)
             self.generateTreeStruct(node)
 
+        # 删除非法节点
+        for node in nodeRemoved:
+            root.children.remove(node)
+
+    # 因为 node 只有md5 所以需要从pending 里面 merge property
     def mergeNodeValue(self, node, newNode):
         node.filename = newNode.filename
         node.parent = newNode.parent
