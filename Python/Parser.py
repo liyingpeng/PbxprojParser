@@ -69,36 +69,14 @@ class Parser(object):
             node = tree.TreeNode()
             node.md5 = idPat.findall(contentItem)[0]
             if len(rootNamePat.findall(contentItem)) > 0:
-
                 nameSplit = rootNamePat.findall(contentItem)[0].split(' ')
-                # ['/*', 'Products', '*/', '=']
-
-                # if len(nameSplit) > 2:
-                #     nameSplit.remove('=')
-                #     nameSplit.pop(0)
-                #     nameSplit.pop(len(nameSplit) - 1)
-
                 node.filename = nameSplit[1]
 
                 if len(node.filename.split('.')) > 1:
                     node.isLeafNode = True
 
             for children in nameIdPat.findall(childrenPat.findall(contentItem)[0]):
-                childrenNode = tree.TreeNode()
-                childrenNode.md5 = idPat.findall(children)[0]
-                if len(namePat.findall(contentItem)) > 0:
-
-                    nameSplit = namePat.findall(children)[0].split(' ')
-                    # ['/*', 'TestForProjectParser', '*/']
-
-                    # if len(nameSplit) > 2:
-                    #     nameSplit.pop(0)
-                    #     nameSplit.pop(len(nameSplit) - 1)
-
-                    childrenNode.filename = nameSplit[1]
-                    
-                    if len(childrenNode.filename.split('.')) > 1:
-                        childrenNode.isLeafNode = True
+                childrenNode = self.nodeWithNameIDString(children)
                 node.children.append(childrenNode)
             '''
             插入节点
@@ -109,16 +87,26 @@ class Parser(object):
         self.tree.generate()
         # self.tree.printDesc()
 
+    def nodeWithNameIDString(self, nameIdString):
+        idPat = re.compile(r'[0-9A-Z]+') 
+        namePat = re.compile(r'/\*\s.+\s\*/')
+        node = tree.TreeNode()
+        node.md5 = idPat.findall(nameIdString)[0]
+        if len(namePat.findall(nameIdString)) > 0:
+            nameSplit = namePat.findall(nameIdString)[0].split(' ')
+            node.filename = nameSplit[1]
+            if len(node.filename.split('.')) > 1:
+                node.isLeafNode = True
+        return node
+
     def resolveConflict(self):
         conflictPat = re.compile(r'<<<<<<<[\s\S]*>>>>>>>')
         conflictString = conflictPat.findall(self.projectSettingContent)[0]
         print conflictString
         nameIdPat = re.compile(r'[0-9A-Z]+\s/\*\s.+\s\*/,') 
-            # 9C4A634722E4828700037752 /* TestForProjectParser.app */,
-        idPat = re.compile(r'[0-9A-Z]+') 
-            # 9C4A634822E4828700037752
         for children in nameIdPat.findall(conflictString):
-            if not self.tree.findNode(idPat.findall(children)[0]):
+            node = self.nodeWithNameIDString(children)
+            if not self.tree.findNode(node):
                 self.deleteContentInFile(children)
         pass
 

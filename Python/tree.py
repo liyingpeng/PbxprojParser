@@ -18,7 +18,7 @@ class Tree(object):
             self.root = node
         self.pendingDict[node.md5] = node
 
-    def findNode(self, md5):
+    def findNode(self, search_node):
         stack = []
         node = self.root
         stack.append(node)
@@ -28,7 +28,7 @@ class Tree(object):
 
         while(len(stack) > 0):
             node = stack.pop()
-            if (node.md5 == md5):
+            if (node.md5 == search_node.md5 and node.filename == search_node.filename):
                 return True
             if (len(stack) > 0):
                 childrenList = stack[-1].children
