@@ -100,14 +100,20 @@ class Parser(object):
         return node
 
     def resolveConflict(self):
-        conflictPat = re.compile(r'<<<<<<<[\s\S]*>>>>>>>')
-        conflictString = conflictPat.findall(self.projectSettingContent)[0]
-        print conflictString
-        nameIdPat = re.compile(r'[0-9A-Z]+\s/\*\s.+\s\*/,') 
-        for children in nameIdPat.findall(conflictString):
-            node = self.nodeWithNameIDString(children)
-            if not self.tree.findNode(node):
-                self.deleteContentInFile(children)
+        conflictPat = re.compile(r'<<<<<<<[^<]*>>>>>>>\s[0-9A-Za-z-_]*')
+        conflictList = conflictPat.findall(self.projectSettingContent)
+        for conflict in conflictList:
+            print "------------------------ deal with ------------------------"
+            print conflict
+            nameIdPat = re.compile(r'[0-9A-Z]+\s/\*\s.+\s\*/,') 
+            for children in nameIdPat.findall(conflict):
+                node = self.nodeWithNameIDString(children)
+                if not self.tree.findNode(node):
+                    self.deleteContentInFile(children)
+                else:
+                    print children + " ✅"
+
+        print "------------------------ done ------------------------"
         pass
 
     def deleteContentInFile(self, content):
@@ -118,7 +124,7 @@ class Parser(object):
         with open(self.project_file,"w") as f_w:
             for line in lines:
                 if content == line.strip():
-                    print "deleting -- " + content
+                    print content + " ❌"
                     continue
                 f_w.write(line)
 
