@@ -18,7 +18,7 @@
 		9C59BBAD230D3BE6004BFADB /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C59BBAC230D3BE6004BFADB /* TestView.m */; };
 		9C59BBB1230D3C07004BFADB /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C59BBB0230D3C07004BFADB /* TestModel.m */; };
 		9C59BBB5230D3C18004BFADB /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C59BBB4230D3C18004BFADB /* TestViewController.m */; };
-		9C59BBB8230D4192004BFADB /* TesetViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C59BBB7230D4192004BFADB /* TesetViewController2.m */; };
+		9C6B6223230E56B300C7D068 /* TestViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6B6222230E56B300C7D068 /* TestViewController3.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +61,8 @@
 		9C59BBB0230D3C07004BFADB /* TestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestModel.m; sourceTree = "<group>"; };
 		9C59BBB3230D3C18004BFADB /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		9C59BBB4230D3C18004BFADB /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		9C59BBB6230D4192004BFADB /* TesetViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TesetViewController2.h; sourceTree = "<group>"; };
-		9C59BBB7230D4192004BFADB /* TesetViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TesetViewController2.m; sourceTree = "<group>"; };
+		9C6B6221230E56B300C7D068 /* TestViewController3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController3.h; sourceTree = "<group>"; };
+		9C6B6222230E56B300C7D068 /* TestViewController3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController3.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +113,9 @@
 		9C4A634922E4828700037752 /* TestForProjectParser */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				9C59BBB9230D4241004BFADB /* Controller2 */,
 				9C59BBB2230D3C0B004BFADB /* Controller */,
-=======
 				9C59BBAE230D3BEC004BFADB /* Model */,
->>>>>>>
 				9C59BBAA230D3BD1004BFADB /* View */,
 				9C4A634A22E4828700037752 /* AppDelegate.h */,
 				9C4A634B22E4828700037752 /* AppDelegate.m */,
@@ -181,8 +178,8 @@
 		9C59BBB9230D4241004BFADB /* Controller2 */ = {
 			isa = PBXGroup;
 			children = (
-				9C59BBB6230D4192004BFADB /* TesetViewController2.h */,
-				9C59BBB7230D4192004BFADB /* TesetViewController2.m */,
+				9C6B6221230E56B300C7D068 /* TestViewController3.h */,
+				9C6B6222230E56B300C7D068 /* TestViewController3.m */,
 			);
 			path = Controller2;
 			sourceTree = "<group>";
@@ -317,8 +314,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C59BBB8230D4192004BFADB /* TesetViewController2.m in Sources */,
 				9C59BBB5230D3C18004BFADB /* TestViewController.m in Sources */,
+				9C6B6223230E56B300C7D068 /* TestViewController3.m in Sources */,
 				9C59BBAD230D3BE6004BFADB /* TestView.m in Sources */,
 				9C59BBB1230D3C07004BFADB /* TestModel.m in Sources */,
 				9C4A634F22E4828700037752 /* ViewController.m in Sources */,

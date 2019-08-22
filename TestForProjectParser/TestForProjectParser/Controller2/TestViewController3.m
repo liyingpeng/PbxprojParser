@@ -1,18 +1,18 @@
 //
-//  TesetViewController2.m
+//  TestViewController3.m
 //  TestForProjectParser
 //
-//  Created by 李应鹏 on 2019/8/21.
+//  Created by 李应鹏 on 2019/8/22.
 //  Copyright © 2019 liyingpeng. All rights reserved.
 //
 
-#import "TesetViewController2.h"
+#import "TestViewController3.h"
 
-@interface TesetViewController2 ()
+@interface TestViewController3 ()
 
 @end
 
-@implementation TesetViewController2
+@implementation TestViewController3
 
 - (void)viewDidLoad {
     [super viewDidLoad];

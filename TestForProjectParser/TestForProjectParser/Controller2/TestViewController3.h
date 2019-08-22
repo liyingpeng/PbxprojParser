@@ -1,8 +1,8 @@
 //
-//  TesetViewController2.h
+//  TestViewController3.h
 //  TestForProjectParser
 //
-//  Created by 李应鹏 on 2019/8/21.
+//  Created by 李应鹏 on 2019/8/22.
 //  Copyright © 2019 liyingpeng. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TesetViewController2 : UIViewController
+@interface TestViewController3 : UIViewController
 
 @end
 
